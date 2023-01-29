@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>infotecs</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="table">
+			<table>
+				<thead>
+						<th>
+							<div class="head_table">
+								<p>FirstName</p>
+								<div class="buttons">
+									<input type="submit" class="but_show" value="" id="but_show1">
+									<input type="submit" class="but_sort" value="" id="but_sort1">
+								</div>
+							</div>
+						</th>
+						<th>
+							<div class="head_table">
+								<p>LastName</p>
+								<div class="buttons">
+									<input type="submit" class="but_show" value="" id="but_show2">
+									<input type="submit" class="but_sort" value="" id="but_sort2">
+								</div>
+							</div>
+						</th>
+						<th>
+							<div class="head_table">
+								<p>About</p>
+								<div class="buttons">
+									<input type="submit" class="but_show" value="" id="but_show3">
+									<input type="submit" class="but_sort" value="" id="but_sort3">
+								</div>
+							</div>
+						</th>
+						<th>
+							<div class="head_table">
+								<p>EyeColor</p>
+								<div class="buttons">
+									<input type="submit" class="but_show" value="" id="but_show4">
+									<input type="submit" class="but_sort" value="" id="but_sort4">
+								</div>
+							</div>
+						</th>
+				</thead>
+				<tbody id="tbody"></tbody>
+			</table>
+
+
+			<div class="pages" id="pages"></div>
+
+		</div>
+
+		<div id="edit_form">
+			<input type="submit" id="close" value="X">
+			<iframe name="votar" style="display:none;"></iframe>
+			<form action="" target="votar">
+				<label>firstName: <br><input type="text" name="firstName" id="firstName"></label>
+				<label>lastName: <br><input type="text" name="lastName" id="lastName"></label>
+				<label>about: <br><textarea name="about" id="about_text" rows="5" placeholder=""></textarea></label>
+				<label>eyeColor: <br><input type="text" name="eyeColor" id="eyeColor"></label>
+				<div class="submits" id="submits_form">
+					<input type="submit" value="Сохранить" id="save">
+					<input type="submit" value="Отменить" name="cancel" id="cancel">
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<!-- получение данных -->
+	<script type="text/javascript" src="js/get_data.js"></script>
+	<!-- заполнение таблицы данными и переход по страницам -->
+	<script type="text/javascript" src="js/table_data.js"></script>
+	<!-- сортировка  -->
+	<script type="text/javascript" src="js/sort.js"></script>
+	<!-- показ/скрытие колонок -->
+	<script type="text/javascript" src="js/show_hidden.js"></script>
+	<!-- редактирование данных выбранной строки -->
+	<script type="text/javascript" src="js/edit_table.js"></script>
+
+	<script>
+		// на кнопки показа/скрытия колонок навешиваем событие - функцию, которая позволяет скрывать и показывать выбранные колонки
+		for(let but of document.getElementsByClassName('but_show')){
+			but.addEventListener('click', show_hidden);
+		}
+		// на кнопку сортировки колонок навешиваем событие - функцию сортировки
+		for(let but of document.getElementsByClassName('but_sort')){
+			but.addEventListener('click', sort);
+		}
+		
+		get_data(table);
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+/* #table{
+	width: 50%;
+} */
+#container{
+	display: flex;
+	flex-direction: row;
+}
+#container > div{
+	width: 50%;
+}
+#edit_form{
+	padding: 70px;
+	display: none;
+}
+#edit_form #close{
+	position: relative;
+	top: 9%;
+	left: 55%;
+	padding: 7px;
+	border: 0px;
+	color: rgb(187, 13, 13);
+	background-color:rgba(230, 230, 230, 0);
+	font-size: 20px;
+	cursor: pointer;
+}
+#edit_form #close:hover{
+	font-weight: bold;
+}
+#edit_form form{
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	width: 55%;
+	border-radius: 7px;
+	background-color:rgb(230, 230, 230);
+	-webkit-box-shadow: 5px 5px 15px -4px rgba(34, 60, 80, 0.31);
+-moz-box-shadow: 5px 5px 15px -4px rgba(34, 60, 80, 0.31);
+box-shadow: 5px 5px 15px -4px rgba(34, 60, 80, 0.31);
+}
+#edit_form form input, #edit_form form textarea{
+	padding: 5px;
+	width: 60%;
+	margin-top: 6px;
+	margin-bottom: 10px;
+	border: 0px;
+	border-radius: 7px;
+	-webkit-box-shadow: 5px 5px 15px -4px rgba(34, 60, 80, 0.31);
+-moz-box-shadow: 5px 5px 15px -4px rgba(34, 60, 80, 0.31);
+box-shadow: 5px 5px 15px -4px rgba(34, 60, 80, 0.31);
+}
+#edit_form form textarea{
+	width: 95%;
+}
+#edit_form form .submits input{
+	width: 45%;
+	background-color:rgb(216, 91, 91);
+	color: #fff;
+}
+#edit_form form .submits #save{
+	margin-right: 15px;
+	background-color:rgb(100, 175, 103);
+}
+#edit_form form .submits input:hover{
+	background-color:rgb(159, 66, 66);
+}
+#edit_form form .submits #save:hover{
+	background-color:rgb(72, 128, 74);
+}
+table{
+	width: 50%;
+	border-collapse: collapse;
+	border: 0px solid rgb(0, 0, 0);
+}
+table td{
+	padding: 3px;
+	border: 1px solid black;
+	font-size: 16px;
+}
+thead th{
+	padding: 0px 15px;
+	border: 1px solid black;
+}
+.head_table{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.head_table p{
+	width: 95%;
+	align-items: center;
+	font-size: 18px;
+	padding: 7px;
+}
+.head_table .buttons{
+	display: flex;
+	flex-direction: column;
+	width: 30px;
+	justify-content: space-between;
+	margin-left: 20px;
+	padding: 7px;
+}
+.head_table .buttons input{
+	border: none;
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 100%;
+}
+.head_table .buttons input:hover{
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+-moz-box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+}
+.head_table .buttons .but_show{
+	background-image: url(img/free-icon-open-eye-829117.png);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-position: center;
+}
+.head_table .buttons .but_hidden{
+	background-image: url(img/free-icon-eye-6107590.png);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-position: center;
+}
+
+.head_table .buttons .but_sort{
+	background-image: url(img/free-icon-sort-9400975.png);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-position: center;
+}
+
+.eyeColor{
+	width: 40px;
+	height: 20px;
+	display: inline-block;
+}
+
+
+.all_about{
+	overflow: visible;
+	cursor: pointer;
+}
+/* обрезка текста с многоточием */
+.part_about{
+	overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+	cursor: pointer;
+}
+
+
+.pages{
+	width: 66%;
+	padding: 20px 5px;
+	font-size: 20px;
+	font-weight: normal;
+
+}
+.pages a{
+	margin-right: 20px;
+	text-decoration: none;
+	color: black;
+	padding: 3px;
+	border-radius: 100%;
+}
+.pages a:hover{
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+-moz-box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+}
+
+
+.edit_table{
+	padding: 3px 0px 3px 10px;
+	border: 0px;
+}
+.a_edit{
+	background-image: url(img/free-icon-editing-2356780.png);
+	background-repeat: no-repeat;
+	width: 30px;
+	height: 30px;
+	background-position: center;
+	border: none;
+	background-color: rgba(255, 255, 255, 0);
+}
+.a_edit:hover{
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+-moz-box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+box-shadow: 0px 0px 20px 3px rgba(122, 122, 122, 0.22);
+}
+
+
+
